@@ -8,12 +8,16 @@ class webapp( BaseHTTPRequestHandler ):
     # Define index page
     if serve.path == "/":
       serve.path = "/index.html"
+    # Otherwise, only serve files with .html extension
+    elif not serve.path.endswith( ".html" ):
+      serve.path = "/404.html"
+      serve.send_response( 404 )
     # Define responses for existent/nonexistent files
     try:
       content = open( serve.path[1:] ).read()
       serve.send_response( 200 )
     except:
-      content = "404 Not Found"
+      serve.path = "/404.html"
       serve.send_response( 404 )
         
     # Need to end headers before writing content
