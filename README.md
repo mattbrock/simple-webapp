@@ -4,9 +4,15 @@ This is a very basic Python webapp for use as an example in DevOps deployment sp
 
 ## Usage
 
+Run the app server as follows:
+
 `python3 server.py`
 
-Website should appear on port 8080 on the machine you're running it on. If running locally, view at http://localhost:8080/.
+The website should appear on port 8080 on the machine you're running it on. If running locally, view at http://localhost:8080/.
+
+To detach it from the shell and keep it running even if you close your terminal session:
+
+`nohup python3 server.py &`
 
 ## Installation on server running RHEL/CentOS 7/8 or Amazon Linux 2
 
