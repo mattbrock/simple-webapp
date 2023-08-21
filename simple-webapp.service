@@ -5,11 +5,11 @@ After=network-online.target
 [Service]
 Type=simple
 User=ec2-user
-WorkingDirectory=/opt/simple_webapp
-ExecStart=/bin/python3 -u /opt/simple_webapp/server.py
+WorkingDirectory=/opt/simple-webapp
+ExecStart=/bin/python3 -u /opt/simple-webapp/server.py
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=simple_webapp
+SyslogIdentifier=simple-webapp
 KillMode=process
 
 [Install]
