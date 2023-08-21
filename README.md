@@ -22,7 +22,7 @@ To detach it from the shell and keep it running even if you close your terminal 
 1. Website should appear on port 8080.
 1. Logs to _/var/log/messages_ via rsyslog (this can be changed by editing your rsyslog configuration).
 
-## Build and run as Docker container
+## Build/run/push as Docker image/container
 
 Build:
 
@@ -31,3 +31,8 @@ Build:
 Run:
 
     docker run -d -p 8080:8080/tcp --name simple_webapp simple_webapp
+
+Push (to Docker Hub):
+
+    docker tag simple_webapp DOCKERHUB_USERNAME/simple_webapp
+    docker push DOCKERHUB_USERNAME/simple_webapp
