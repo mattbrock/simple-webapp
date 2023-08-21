@@ -30,4 +30,4 @@ Build:
     
 Run:
 
-    docker run -p 8080:8080/tcp --name simple_webapp simple_webapp
+    docker run -d -p 8080:8080/tcp --name simple_webapp simple_webapp
