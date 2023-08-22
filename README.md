@@ -35,4 +35,5 @@ Run:
 Push (to Docker Hub):
 
     docker tag simple-webapp DOCKERHUB_USERNAME/simple-webapp
+
     docker push DOCKERHUB_USERNAME/simple-webapp
