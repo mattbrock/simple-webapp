@@ -32,6 +32,14 @@ Run:
 
     docker run -d -p 8080:8080/tcp --name simple-webapp simple-webapp
 
+Check:
+
+    curl http://127.0.0.1:8080
+    
+Check logs:
+
+    docker logs simple-webapp
+    
 Push (to Docker Hub):
 
     docker tag simple-webapp DOCKERHUB_USERNAME/simple-webapp
